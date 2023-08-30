@@ -1,0 +1,14 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% block title %} Delete {% endblock title %}
+{% block content %}
+<h2>Joriy yangiliklarni ochirish</h2>
+<form action="" method="post">{% csrf_token %}
+    <h3>{{ news.title | truncatewords:5 }} sarlavhani o'chirmoqchimisiz</h3>
+    <input type="submit" value="Delete">
+
+</form>
+
+
+
+{% endblock content %}
